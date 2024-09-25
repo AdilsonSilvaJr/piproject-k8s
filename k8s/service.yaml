@@ -1,4 +1,4 @@
-// Kubernetes service definition 
+# Kubernetes service definition 
 apiVersion: v1
 kind: Service
 metadata:

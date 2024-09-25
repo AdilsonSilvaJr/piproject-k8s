@@ -1,4 +1,4 @@
-// Streamlit application code 
+# Streamlit application code 
 import streamlit as st
 
 st.title('Hello, Streamlit!')

@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/your_username/your_streamlit_repo.git'
+                git 'https://github.com/adilsonsilvajr/piproject-k8s.git'
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t your_dockerhub_username/streamlit-app ./ci_cd/docker-app'
+                sh 'docker build -t adilsonsilvajr/streamlit-app ./ci_cd/docker-app'
             }
         }
         stage('Push Docker Image') {
             steps {
-                sh 'docker push your_dockerhub_username/streamlit-app'
+                sh 'docker push adilsonsilvajr/streamlit-app'
             }
         }
         stage('Deploy with Ansible') {

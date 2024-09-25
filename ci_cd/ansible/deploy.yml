@@ -1,4 +1,4 @@
-// Ansible playbook for deployment 
+# Ansible playbook for deployment 
 ---
 - hosts: localhost
   tasks:
@@ -23,6 +23,6 @@
               spec:
                 containers:
                 - name: streamlit
-                  image: your_dockerhub_username/streamlit-app:latest
+                  image: adilsonsilvajr/streamlit-app:latest
                   ports:
                   - containerPort: 8501

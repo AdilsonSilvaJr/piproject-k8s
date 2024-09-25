@@ -1,4 +1,4 @@
-// Kubernetes deployment definition 
+# Kubernetes deployment definition 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,6 +15,12 @@ spec:
     spec:
       containers:
       - name: streamlit
-        image: your_dockerhub_username/streamlit-app:latest
+        image: adilsonsilvajr/streamlit-app:latest
+        resources:
+          limits:
+            cpu: "2"
+            memory: "512Mi"
+        env:
+        - name: STREAMLIT_APP
         ports:
         - containerPort: 8501
