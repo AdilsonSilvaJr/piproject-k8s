@@ -1,0 +1,2 @@
+# Python dependencies for the app 
+streamlit==1.38.0

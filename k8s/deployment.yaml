@@ -1,0 +1,20 @@
+// Kubernetes deployment definition 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamlit-app
+  template:
+    metadata:
+      labels:
+        app: streamlit-app
+    spec:
+      containers:
+      - name: streamlit
+        image: your_dockerhub_username/streamlit-app:latest
+        ports:
+        - containerPort: 8501
